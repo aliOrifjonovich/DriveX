@@ -1,7 +1,6 @@
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import Layout from '@/layouts/Layout';
-import { Container } from '@mui/material';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -49,9 +48,7 @@ export default async function RootLayout({
             <div className="sticky top-0 z-30 flex h-[94px] items-center justify-between bg-white">
               <Header />
             </div>
-            <Layout>
-              <Container>{children}</Container>
-            </Layout>
+            <Layout>{children}</Layout>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

@@ -204,9 +204,9 @@ export const EmailIcon: FC<ComponentProps<'svg'>> = () => {
       <path
         d="M6 8L9.7812 10.5208C11.1248 11.4165 12.8752 11.4165 14.2188 10.5208L18 8M6 21H18C20.2091 21 22 19.2091 22 17V7C22 4.79086 20.2091 3 18 3H6C3.79086 3 2 4.79086 2 7V17C2 19.2091 3.79086 21 6 21Z"
         stroke="#28303F"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -224,8 +224,8 @@ export const PhoneIcon: FC<ComponentProps<'svg'>> = () => {
       <path
         d="M21 19V17.3541C21 16.5363 20.5021 15.8008 19.7428 15.4971L17.7086 14.6835C16.7429 14.2971 15.6422 14.7156 15.177 15.646L15 16C15 16 12.5 15.5 10.5 13.5C8.5 11.5 8 9 8 9L8.35402 8.82299C9.28438 8.35781 9.70285 7.25714 9.31654 6.29136L8.50289 4.25722C8.19916 3.4979 7.46374 3 6.64593 3H5C3.89543 3 3 3.89543 3 5C3 13.8366 10.1634 21 19 21C20.1046 21 21 20.1046 21 19Z"
         stroke="#28303F"
-        stroke-width="1.5"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -355,6 +355,26 @@ export const CircleIcon: FC<ComponentProps<'svg'>> = () => {
         fill="white"
         fillOpacity="0.06"
       />
+    </svg>
+  );
+};
+
+export const LeftRowIcon: FC<ComponentProps<'svg'>> = () => {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 12L10 8L6 4"
+        stroke="#1d4ed8"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
     </svg>
   );
 };
