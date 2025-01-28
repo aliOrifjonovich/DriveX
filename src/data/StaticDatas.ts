@@ -1,3 +1,4 @@
+import { FacebookIcon, TwitterIcon } from '@/Icons/NotificationIcon';
 import bmw from '../assets/bmw.png';
 import byd from '../assets/byd.png';
 
@@ -16,6 +17,7 @@ import sport from '../assets/sport.png';
 import standart from '../assets/standart.png';
 import tesla from '../assets/tesla.webp';
 import toyota from '../assets/toyota.png';
+
 export const marqueData = {
   carbrands: [
     { img: chevrolet, name: 'Chevrolet' },
@@ -57,3 +59,80 @@ export const marqueData = {
     },
   ],
 };
+
+export const FooterPages = [
+  {
+    name: 'about',
+    pages: [
+      {
+        page: 'about us',
+        href: '/about-us',
+      },
+      {
+        page: 'contact us',
+        href: '/contact-us',
+      },
+      {
+        page: 'privacy policy',
+        href: '/privacy-policy',
+      },
+      {
+        page: 'terms and conditions',
+        href: '/terms-and-conditions',
+      },
+    ],
+  },
+  {
+    name: 'about',
+    pages: [
+      {
+        page: 'about us',
+        href: '/about-us',
+      },
+      {
+        page: 'contact us',
+        href: '/contact-us',
+      },
+      {
+        page: 'privacy policy',
+        href: '/privacy-policy',
+      },
+      {
+        page: 'terms and conditions',
+        href: '/terms-and-conditions',
+      },
+    ],
+  },
+  {
+    name: 'about',
+    pages: [
+      {
+        page: 'about us',
+        href: '/about-us',
+      },
+      {
+        page: 'contact us',
+        href: '/contact-us',
+      },
+      {
+        page: 'privacy policy',
+        href: '/privacy-policy',
+      },
+      {
+        page: 'terms and conditions',
+        href: '/terms-and-conditions',
+      },
+    ],
+  },
+];
+
+export const SocailMedai = [
+  {
+    icon: FacebookIcon,
+    href: '/',
+  },
+  {
+    icon: TwitterIcon,
+    href: '/',
+  },
+];
