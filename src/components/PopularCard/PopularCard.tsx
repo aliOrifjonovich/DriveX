@@ -1,12 +1,12 @@
 'use client';
 
-import { DataInterface } from '@/app/page';
 import { Grid2 } from '@mui/material';
 import { FC, useEffect, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '../Card/Card';
 import CardSkeleton from '../Skeleton/CardSkeleton';
+import { DataInterface } from '../Home/Home';
 
 interface PopularCardInterface {
   data: DataInterface[];

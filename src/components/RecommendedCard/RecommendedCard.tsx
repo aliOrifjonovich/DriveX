@@ -1,9 +1,9 @@
 'use client';
 
-import { DataInterface } from '@/app/page';
 import { Grid2 } from '@mui/material';
 import { FC, useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import { DataInterface } from '../Home/Home';
 
 interface RecommendedCardInterface {
   data: DataInterface[];

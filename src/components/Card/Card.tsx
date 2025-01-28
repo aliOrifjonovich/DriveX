@@ -1,10 +1,10 @@
 'use client';
 
-import { DataInterface } from '@/app/page';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { BalloonIcon, GasolineIcon, LikeIcon, PeopleCapacity } from '@/Icons';
 import Image from 'next/image';
 import { FC } from 'react';
+import { DataInterface } from '../Home/Home';
 
 interface CardInterface {
   elem: DataInterface;

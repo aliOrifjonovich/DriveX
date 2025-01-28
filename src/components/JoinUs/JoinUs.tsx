@@ -6,7 +6,6 @@ import Button from '../ui/button';
 export default function JoinUs() {
   return (
     <div className="flex w-full items-center justify-between gap-10 rounded-md bg-white p-4 shadow-md">
-      {/* First Div */}
       <div className="h-[250px] w-[250px] flex-shrink-0">
         <Image
           src={carimage}

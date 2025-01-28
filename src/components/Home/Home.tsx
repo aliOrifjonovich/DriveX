@@ -1,24 +1,13 @@
-import { Button, Container } from '@mui/material';
-import Image, { StaticImageData } from 'next/image';
-
 import { LeftRowIcon } from '@/Icons/NotificationIcon';
 import Banner from '@/components/Banner/Banner';
 import PopularCard from '@/components/PopularCard/PopularCard';
 import RecommendedCard from '@/components/RecommendedCard/RecommendedCard';
+import { marqueData } from '@/data/StaticDatas';
+import { Button, Container } from '@mui/material';
 import { useTranslations } from 'next-intl';
+import Image, { StaticImageData } from 'next/image';
 import Marquee from 'react-fast-marquee';
-import bmw from '../../assets/bmw.png';
-import byd from '../../assets/byd.png';
 import CarImage from '../../assets/car.png';
-import chevrolet from '../../assets/chevrolet.webp';
-import isuzu from '../../assets/isuzu.png';
-import kiya from '../../assets/kiya.png';
-import lexus from '../../assets/lexus.png';
-import lisang from '../../assets/lisang.png';
-import mercedes from '../../assets/mercedes.png';
-import porse from '../../assets/porse.png';
-import tesla from '../../assets/tesla.webp';
-import toyota from '../../assets/toyota.png';
 import JoinUs from '../JoinUs/JoinUs';
 import SearchForm from '../SearchForm/SearchForm';
 import TopHost from '../TopHosts/TopHost';
@@ -117,20 +106,6 @@ const data: DataInterface[] = [
   },
 ];
 
-const marqueData = [
-  { img: chevrolet, name: 'Chevrolet' },
-  { img: toyota, name: 'Toyota' },
-  { img: lisang, name: 'Lisang' },
-  { img: tesla, name: 'Tesla' },
-  { img: isuzu, name: 'Isuzu' },
-  { img: mercedes, name: 'Mercedes' },
-  { img: bmw, name: 'BMW' },
-  { img: kiya, name: 'KIA' },
-  { img: byd, name: 'BYD' },
-  { img: porse, name: 'PORSE' },
-  { img: lexus, name: 'LEXUS' },
-];
-
 export default function Home() {
   const t = useTranslations('HomePage');
   return (
@@ -149,7 +124,7 @@ export default function Home() {
               direction="left"
               gradientWidth={100}
             >
-              {marqueData?.map((el, index) => (
+              {marqueData?.carbrands?.map((el, index) => (
                 <div
                   key={index}
                   className="mr-14 h-[60px] w-max overflow-hidden"
@@ -189,6 +164,26 @@ export default function Home() {
               </Button>
             </div>
             <PopularCard data={data} />
+          </div>
+
+          <div className="max-md:g-[14px] flex w-full items-center justify-evenly gap-4 p-2 max-md:overflow-x-auto">
+            {marqueData?.carTypes?.map((el, index) => (
+              <div
+                className="max-md:g-1 flex cursor-pointer flex-col-reverse items-center gap-2 rounded-lg bg-white p-2 shadow-md"
+                key={index}
+              >
+                <h2>{el.name}</h2>
+                <div className="h-[100px] w-max max-md:h-[80px]">
+                  <Image
+                    src={el.img}
+                    height="1000"
+                    width="1000"
+                    className="h-full w-full rounded-xl object-cover"
+                    alt={el.name}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="flex flex-col gap-4">
