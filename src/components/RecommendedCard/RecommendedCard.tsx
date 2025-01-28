@@ -1,7 +1,7 @@
 'use client';
 
 import { Grid2 } from '@mui/material';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Card from '../Card/Card';
 import { DataInterface } from '../Home/Home';
 
@@ -10,11 +10,6 @@ interface RecommendedCardInterface {
 }
 const RecommendedCard: FC<RecommendedCardInterface> = (props) => {
   const { data } = props;
-
-  const [load, setLoad] = useState(false);
-  useEffect(() => {
-    setLoad(true);
-  }, []);
 
   return (
     <Grid2

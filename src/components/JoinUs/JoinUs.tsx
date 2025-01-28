@@ -18,11 +18,11 @@ export default function JoinUs() {
 
       <div className="flex-grow">
         <h1 className="mb-2 text-[23px]">
-          O‘z avtomobillaringizni ijaraga taklif qiling – bizning platformamizda joylashtiring!
+          O'z avtomobillaringizni ijaraga taklif qiling - bizning platformamizda joylashtiring!
         </h1>
         <p className="text-[18px]">
-          Platformamizga avtomobillaringizni qo‘shing va mijozlar bazangizni kengaytiring. Tezkor
-          jarayon, keng ko‘lamli auditoriya va har bir bosqichda yordam sizni kutmoqda!
+          Platformamizga avtomobillaringizni qo'shing va mijozlar bazangizni kengaytiring. Tezkor
+          jarayon, keng ko'lamli auditoriya va har bir bosqichda yordam sizni kutmoqda!
         </p>
       </div>
 
