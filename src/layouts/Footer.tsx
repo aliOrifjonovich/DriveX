@@ -27,14 +27,17 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
-              {FooterPages.map((item) => (
-                <div>
+              {FooterPages.map((item, index) => (
+                <div key={index}>
                   <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
                     {item.name}
                   </h2>
                   <ul className="font-medium text-gray-500 dark:text-gray-400">
-                    {item.pages.map((page) => (
-                      <li className="mb-4 list-none">
+                    {item.pages.map((page, index) => (
+                      <li
+                        className="mb-4 list-none"
+                        key={index}
+                      >
                         <a
                           href={page.href}
                           className="capitalize text-gray-500 no-underline transition-all hover:text-black"
@@ -61,8 +64,9 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <div className="mt-4 flex gap-4 sm:mt-0 sm:justify-center">
-              {SocailMedai.map((item) => (
+              {SocailMedai.map((item, index) => (
                 <a
+                  key={index}
                   href={item.href}
                   className="p-1 text-gray-500 hover:text-gray-900 dark:hover:text-white"
                 >
