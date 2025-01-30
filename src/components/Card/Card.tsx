@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { FC, useState } from 'react';
 import Login from '../Login/Login';
 import Modal from '../Modal/Modal';
+import Signup from '../Signup/Signup';
 
 interface CardInterface {
   elem: DataInterface;
@@ -108,6 +109,15 @@ const Card: FC<CardInterface> = (props) => {
         handleClose={() => setOpen(false)}
       >
         <Login
+          setOpen={setOpen}
+          setOpenSignup={setOpenSignup}
+        />
+      </Modal>
+      <Modal
+        open={openSignup}
+        handleClose={() => setOpenSignup(false)}
+      >
+        <Signup
           setOpen={setOpen}
           setOpenSignup={setOpenSignup}
         />

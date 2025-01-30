@@ -102,10 +102,6 @@ export const FooterPages = [
         page: 'Advertisement',
         href: '/',
       },
-      {
-        page: 'terms and conditions',
-        href: '/terms-and-conditions',
-      },
     ],
   },
   {
