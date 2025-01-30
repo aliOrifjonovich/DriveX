@@ -38,7 +38,7 @@ export default function TopHost() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between px-2">
-        <h2>Top Renters</h2>
+        <h2>{t('top_hosts')}</h2>
         <Button
           variant="text"
           size="small"

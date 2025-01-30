@@ -1,6 +1,43 @@
 {
   "HomePage": {
-    "title": "salom",
-    "view_all": "Barchasi"
+    "title": "Salom dunyo!",
+    "view_all": "Barchasi",
+    "banner_tag": "Mukammal avtomobilni toping, bron qiling va haydang!",
+    "banner_p": "Orzuyingizdagi avtomobilni istalgan vaqtda, istalgan joyda osonlik bilan oling.",
+    "pickup": "Olish joyi",
+    "from": "Qabul qilish kuni",
+    "time": "Vaqt",
+    "until": "Qaytib berish kuni",
+    "search": "Qidirish",
+    "map": "Xarita",
+    "popular_cars": "Mashhur avtomobillar",
+    "recommended_cars": "Tavsiya etilgan avtomobillar",
+    "top_hosts": "Eng yaxshi ijara beruvchilar",
+    "main_title_1": "O'z avtomobillaringizni ijaraga taklif qiling – bizning platformamizda joylashtiring!",
+    "main_text_1": "Avtomobillaringizni platformamizga qo'shing va mijozlar bazangizni kengaytiring. Tezkor jarayon, keng auditoriya va har bosqichda qo‘llab-quvvatlash sizni kutmoqda!",
+    "main_title_2": "Hurmatli kompaniyalar!",
+    "main_text_2": "Sizga sifatli lidlar kerakmi?",
+    "join_us": "Biz bilan bog'laning",
+    "our_blogs": "DriveX Yangiliklari",
+    "our_blogs_text": "Biz bilan biznesingizni qanday rivojlantirish mumkinligini bilib oling.",
+    "rent_now": "Ijaraga Oling",
+    "location_placeholder": "Viloyat, aeroport, adress va hotelizni yozing"
+  },
+
+  "Footer": {
+    "footer_text": "Bizning maqsadimiz – avtomobil ijarasi sohasida qulaylik yaratish, daromadingizni oshirish va biznesingizni yangi bosqichga olib chiqish.",
+    "all_rights_reserved": ". Barcha huquqlar himoyalangan.",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "contact_us": "Biz bilan bog‘lanish",
+    "privacy_policy": "Maxfiylik siyosati",
+    "terms_and_conditions": "Foydalanish shartlari",
+    "partner_with_priceline": "Priceline bilan hamkorlik",
+    "add_your_cars": "Avtomobillaringizni qo‘shing",
+    "drivex_partner_solutions": "DriveX hamkorlik yechimlari",
+    "advertisement": "Reklama",
+    "connect_with_drivex": "DriveX bilan bog‘laning",
+    "drivex_for_ios": "iOS uchun DriveX",
+    "drivex_for_android": "Android uchun DriveX"
   }
 }

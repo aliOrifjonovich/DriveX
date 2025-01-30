@@ -1,9 +1,40 @@
-import { FooterPages, SocailMedia } from '@/data/StaticDatas';
+import { SocailMedia } from '@/data/StaticDatas';
 import { Container } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import logo from '../assets/fontbolt.png';
 
 const Footer = () => {
+  const t = useTranslations('Footer');
+
+  const FooterPages = [
+    {
+      name: t('about'),
+      pages: [
+        { page: t('about'), href: '/about-us' },
+        { page: t('news'), href: '/blogs' },
+        { page: t('contact_us'), href: '/contact-us' },
+        { page: t('privacy_policy'), href: '/privacy-policy' },
+        { page: t('terms_and_conditions'), href: '/terms-and-conditions' },
+      ],
+    },
+    {
+      name: t('partner_with_priceline'),
+      pages: [
+        { page: t('add_your_cars'), href: '/' },
+        { page: t('drivex_partner_solutions'), href: '/' },
+        { page: t('advertisement'), href: '/' },
+      ],
+    },
+    {
+      name: t('connect_with_drivex'),
+      pages: [
+        { page: t('drivex_for_ios'), href: '/' },
+        { page: t('drivex_for_android'), href: '/' },
+      ],
+    },
+  ];
+
   return (
     <Container>
       <footer className="w-full bg-white dark:bg-gray-900">
@@ -21,8 +52,7 @@ const Footer = () => {
                 />
               </a>
               <p className="w-[200px] text-wrap break-words text-sm md:w-[300px] lg:w-[400px]">
-                Our goal is to create convenience in the car rental industry, increase your
-                earnings, and take your business to the next level.
+                {t('footer_text')}
               </p>
             </div>
 
@@ -64,7 +94,7 @@ const Footer = () => {
               >
                 DriveX™
               </a>
-              . All Rights Reserved.
+              {t('all_rights_reserved')}
             </span>
             <div className="mt-4 flex gap-4 sm:mt-0 sm:justify-center">
               {SocailMedia.map((item, index) => (

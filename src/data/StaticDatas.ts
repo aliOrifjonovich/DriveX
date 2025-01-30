@@ -61,64 +61,6 @@ export const marqueData = {
   ],
 };
 
-export const FooterPages = [
-  {
-    name: 'about',
-    pages: [
-      {
-        page: 'about us',
-        href: '/about-us',
-      },
-      {
-        page: 'News',
-        href: '/blogs',
-      },
-      {
-        page: 'contact us',
-        href: '/contact-us',
-      },
-      {
-        page: 'privacy policy',
-        href: '/privacy-policy',
-      },
-      {
-        page: 'terms and conditions',
-        href: '/terms-and-conditions',
-      },
-    ],
-  },
-  {
-    name: 'Partner with Priceline',
-    pages: [
-      {
-        page: 'Add your cars',
-        href: '/',
-      },
-      {
-        page: 'DriveX parner solutions',
-        href: '/',
-      },
-      {
-        page: 'Advertisement',
-        href: '/',
-      },
-    ],
-  },
-  {
-    name: 'Connect with DriveX',
-    pages: [
-      {
-        page: 'DriveX for IOS',
-        href: '/',
-      },
-      {
-        page: 'DriveX for Android',
-        href: '/',
-      },
-    ],
-  },
-];
-
 export const SocailMedia = [
   {
     icon: FacebookIcon,

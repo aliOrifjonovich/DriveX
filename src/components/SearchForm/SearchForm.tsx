@@ -4,6 +4,7 @@ import { Divider } from '@mui/material';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Dayjs } from 'dayjs';
+import { useTranslations } from 'next-intl';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../ui/button';
 
@@ -22,6 +23,7 @@ const TIME_OPTIONS = Array.from({ length: 48 }, (_, i) => {
 });
 
 const SearchForm = () => {
+  const t = useTranslations('HomePage');
   const { register, handleSubmit, setValue, watch } = useForm<SearchFormValues>({
     defaultValues: {
       fromTime: '10:00 AM',
@@ -43,12 +45,12 @@ const SearchForm = () => {
             htmlFor="location"
             className="mb-1 text-sm font-medium text-gray-600 md:text-lg"
           >
-            Pick-up Location
+            {t('pickup')}
           </label>
           <input
             id="location"
             type="text"
-            placeholder="City, airport, address or hotel"
+            placeholder={t('location_placeholder')}
             {...register('location', { required: true })}
             className="w-full rounded-md border-[1px] border-solid border-gray-300 p-2 text-sm text-gray-700 outline-none hover:border-black focus:border-blue-500 focus:outline-none"
           />
@@ -64,7 +66,9 @@ const SearchForm = () => {
           <div className="flex flex-1 flex-col">
             <div className="flex space-x-2">
               <div>
-                <label className="mb-1 text-sm font-medium text-gray-600 md:text-lg">From</label>
+                <label className="mb-1 text-sm font-medium text-gray-600 md:text-lg">
+                  {t('from')}
+                </label>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
                     value={watch('fromDate')}
@@ -82,7 +86,7 @@ const SearchForm = () => {
                   htmlFor="taking-Time"
                   className="mb-1 text-xs font-medium text-gray-600 md:text-lg"
                 >
-                  Time
+                  {t('time')}
                 </label>
 
                 <select
@@ -116,7 +120,7 @@ const SearchForm = () => {
             <div className="flex w-full space-x-2">
               <div>
                 <label className="mb-1 w-max text-sm font-medium text-gray-600 md:text-lg">
-                  Until
+                  {t('until')}
                 </label>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
@@ -136,7 +140,7 @@ const SearchForm = () => {
                   htmlFor="until-time"
                   className="mb-1 text-xs font-medium text-gray-600 md:text-lg"
                 >
-                  Time
+                  {t('time')}
                 </label>
 
                 <select
@@ -171,7 +175,7 @@ const SearchForm = () => {
             type="submit"
             className="flex h-[45px] w-1/2 cursor-pointer items-center justify-center rounded-lg border-solid border-blue-600 bg-blue-600 text-lg text-white hover:bg-blue-800 md:h-[45px] md:w-28 md:w-[100px]"
           >
-            Search
+            {t('search')}
           </Button>
 
           <Button
@@ -179,7 +183,7 @@ const SearchForm = () => {
             onClick={() => setValue('location', '')}
             className="flex h-[45px] w-1/2 w-full items-center justify-center rounded-lg bg-white text-lg text-black hover:bg-black hover:text-white md:h-[45px] md:w-28 md:w-[100px]"
           >
-            Map
+            {t('map')}
           </Button>
         </div>
       </form>

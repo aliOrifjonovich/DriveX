@@ -133,7 +133,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4">
           <div className="flex justify-between px-2">
-            <h2 className="max-md:text-2xl">Popular Car</h2>
+            <h2 className="max-md:text-2xl">{t('popular_cars')}</h2>
             <Button
               variant="text"
               size="small"
@@ -181,7 +181,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4">
           <div className="flex justify-between px-2">
-            <h2 className="max-md:text-xl">Recommended Car</h2>
+            <h2 className="max-md:text-xl">{t('recommended_cars')}</h2>
             <Button
               variant="text"
               size="small"

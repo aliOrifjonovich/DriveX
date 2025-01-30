@@ -3,6 +3,7 @@
 import { BalloonIcon, GasolineIcon, LikeIcon, PeopleCapacity } from '@/Icons';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { DataInterface } from '@/interfaces/post.interface';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import Login from '../Login/Login';
@@ -14,6 +15,7 @@ interface CardInterface {
 }
 
 const Card: FC<CardInterface> = (props) => {
+  const t = useTranslations('HomePage');
   const [open, setOpen] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
   const { elem } = props;
@@ -98,7 +100,7 @@ const Card: FC<CardInterface> = (props) => {
               as="button"
               className="cursor-pointer rounded-xl bg-black px-4 py-2 text-xs font-bold text-white hover:bg-white hover:text-black"
             >
-              Rent Now
+              {t('rent_now')}
             </CardItem>
           </div>
         </CardBody>

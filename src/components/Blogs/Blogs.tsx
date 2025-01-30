@@ -20,9 +20,9 @@ const Blogs: FC<IBlogsProps> = ({ numbersofposts }) => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              DriveX News
+              {t('our_blogs')}
             </h2>
-            <p className="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with us.</p>
+            <p className="mt-2 text-lg/8 text-gray-600">{t('our_blogs_text')}</p>
           </div>
           <Button
             variant="text"

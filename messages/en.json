@@ -1,6 +1,43 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "view_all": "View More"
+    "view_all": "View More",
+    "banner_tag": "Find, Book, and Drive Your Perfect Car Today!",
+    "banner_p": "Get your dream car anytime, anywhere – easily with our app.",
+    "pickup": "Pick-up Location",
+    "from": "From",
+    "time": " Time",
+    "until": "Until",
+    "search": "Search",
+    "map": "Map",
+    "popular_cars": "Popular Cars",
+    "recommended_cars": "Recommended Cars",
+    "top_hosts": "Top Renters",
+    "main_title_1": "Offer Your Cars for Rent – List Them on Our Platform!",
+    "main_text_1": "Add your cars to our platform and expand your customer base. A fast process, a wide audience, and support at every step are waiting for you!",
+    "main_title_2": "Dear Companies!",
+    "main_text_2": "Do you need high-quality leads?",
+    "join_us": "Contact Us",
+    "our_blogs": "DriveX News",
+    "our_blogs_text": "Learn how to grow your business with us.",
+    "rent_now": "Rent Now",
+    "location_placeholder": "City, airport, address or hotel"
+  },
+
+  "Footer": {
+    "all_rights_reserved": ". All rights reserved.",
+    "footer_text": " Our goal is to create convenience in the car rental industry, increase your earnings, and take your business to the next level.",
+    "about": "About",
+    "news": "News",
+    "contact_us": "Contact Us",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms and Conditions",
+    "partner_with_priceline": "Partner with Priceline",
+    "add_your_cars": "Add Your Cars",
+    "drivex_partner_solutions": "DriveX Partner Solutions",
+    "advertisement": "Advertisement",
+    "connect_with_drivex": "Connect with DriveX",
+    "drivex_for_ios": "DriveX for iOS",
+    "drivex_for_android": "DriveX for Android"
   }
 }

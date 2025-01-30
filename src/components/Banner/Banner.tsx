@@ -1,6 +1,7 @@
 'use client';
 
 import { CircleIcon } from '@/Icons/NotificationIcon';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FC } from 'react';
 import Appstore from '../../assets/appstore.svg';
@@ -9,6 +10,7 @@ import Playstore from '../../assets/googleplay.svg';
 import Heading from '../ui/heading';
 
 const Banner: FC = () => {
+  const t = useTranslations('HomePage');
   const bannerContent = (
     <div className="relative flex h-[350px] w-full flex-col-reverse items-center justify-center rounded-md bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 pb-5 pt-5 md:h-[530px] md:flex-row md:flex-row-reverse md:items-center md:justify-center">
       <div className="relative z-10 h-full w-2/3">
@@ -30,10 +32,10 @@ const Banner: FC = () => {
               level={1}
               className="text-center text-xl font-semibold text-white md:text-left md:text-4xl md:leading-normal"
             >
-              Find, Book, and Drive Your Perfect Car Today!
+              {t('banner_tag')}
             </Heading>
             <p className="pl-1 pr-1 text-center text-[14px] font-normal leading-7 md:text-left md:text-lg">
-              Get your dream car anytime, anywhere – easily with our app.
+              {t('banner_p')}
             </p>
           </div>
 
