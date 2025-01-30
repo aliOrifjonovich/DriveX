@@ -38,7 +38,7 @@ export default function TopHost() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between px-2">
-        <h2>Top Car-Renting Companies</h2>
+        <h2>Top Renters</h2>
         <Button
           variant="text"
           size="small"
@@ -52,6 +52,9 @@ export default function TopHost() {
             display: 'flex',
             alignItems: 'center',
             gap: '4px',
+            '@media (max-width: 768px)': {
+              fontSize: '12px',
+            },
           }}
         >
           {t('view_all')}

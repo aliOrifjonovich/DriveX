@@ -1,4 +1,4 @@
-import { FooterPages, SocailMedai } from '@/data/StaticDatas';
+import { FooterPages, SocailMedia } from '@/data/StaticDatas';
 import { Container } from '@mui/material';
 import Image from 'next/image';
 import logo from '../assets/fontbolt.png';
@@ -6,8 +6,8 @@ import logo from '../assets/fontbolt.png';
 const Footer = () => {
   return (
     <Container>
-      <footer className="bg-white dark:bg-gray-900">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <footer className="w-full bg-white dark:bg-gray-900">
+        <div className="p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 flex flex-col gap-3 md:mb-0">
               <a
@@ -28,7 +28,10 @@ const Footer = () => {
 
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               {FooterPages.map((item, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  className="px-4"
+                >
                   <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
                     {item.name}
                   </h2>
@@ -64,14 +67,13 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <div className="mt-4 flex gap-4 sm:mt-0 sm:justify-center">
-              {SocailMedai.map((item, index) => (
+              {SocailMedia.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
                   className="p-1 text-gray-500 hover:text-gray-900 dark:hover:text-white"
                 >
                   <item.icon />
-                  <span className="sr-only">Facebook page</span>
                 </a>
               ))}
             </div>

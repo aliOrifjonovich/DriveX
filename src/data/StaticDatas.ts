@@ -1,7 +1,8 @@
-import { FacebookIcon, TwitterIcon } from '@/Icons/NotificationIcon';
+import { FacebookIcon, InstagramIcon, TwitterIcon } from '@/Icons/NotificationIcon';
 import bmw from '../assets/bmw.png';
 import byd from '../assets/byd.png';
 
+import { Posts } from '@/interfaces/post.interface';
 import chevrolet from '../assets/chevrolet.webp';
 import crossovers from '../assets/crossovers.png';
 import isuzu from '../assets/isuzu.png';
@@ -69,25 +70,8 @@ export const FooterPages = [
         href: '/about-us',
       },
       {
-        page: 'contact us',
-        href: '/contact-us',
-      },
-      {
-        page: 'privacy policy',
-        href: '/privacy-policy',
-      },
-      {
-        page: 'terms and conditions',
-        href: '/terms-and-conditions',
-      },
-    ],
-  },
-  {
-    name: 'about',
-    pages: [
-      {
-        page: 'about us',
-        href: '/about-us',
+        page: 'News',
+        href: '/blogs',
       },
       {
         page: 'contact us',
@@ -104,29 +88,42 @@ export const FooterPages = [
     ],
   },
   {
-    name: 'about',
+    name: 'Partner with Priceline',
     pages: [
       {
-        page: 'about us',
-        href: '/about-us',
+        page: 'Add your cars',
+        href: '/',
       },
       {
-        page: 'contact us',
-        href: '/contact-us',
+        page: 'DriveX parner solutions',
+        href: '/',
       },
       {
-        page: 'privacy policy',
-        href: '/privacy-policy',
+        page: 'Advertisement',
+        href: '/',
       },
       {
         page: 'terms and conditions',
         href: '/terms-and-conditions',
+      },
+    ],
+  },
+  {
+    name: 'Connect with DriveX',
+    pages: [
+      {
+        page: 'DriveX for IOS',
+        href: '/',
+      },
+      {
+        page: 'DriveX for Android',
+        href: '/',
       },
     ],
   },
 ];
 
-export const SocailMedai = [
+export const SocailMedia = [
   {
     icon: FacebookIcon,
     href: '/',
@@ -134,5 +131,67 @@ export const SocailMedai = [
   {
     icon: TwitterIcon,
     href: '/',
+  },
+  {
+    icon: InstagramIcon,
+    href: '/',
+  },
+];
+
+export const posts: Posts[] = [
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    bannerImage: premium,
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+  },
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    bannerImage: premium,
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+  },
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    bannerImage: premium,
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+  },
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    bannerImage: premium,
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
+  },
+  {
+    id: 1,
+    title: 'Boost your conversion rate',
+    href: '#',
+    bannerImage: premium,
+    description:
+      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+    date: 'Mar 16, 2020',
+    datetime: '2020-03-16',
+    category: { title: 'Marketing', href: '#' },
   },
 ];

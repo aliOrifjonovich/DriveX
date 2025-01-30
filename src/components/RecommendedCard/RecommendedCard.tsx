@@ -1,9 +1,9 @@
 'use client';
 
+import { DataInterface } from '@/interfaces/post.interface';
 import { Grid2 } from '@mui/material';
 import { FC } from 'react';
 import Card from '../Card/Card';
-import { DataInterface } from '../Home/Home';
 
 interface RecommendedCardInterface {
   data: DataInterface[];

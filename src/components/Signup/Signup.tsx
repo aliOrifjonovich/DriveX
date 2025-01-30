@@ -108,8 +108,8 @@ const Signup: React.FC<RegisterProps> = ({ setOpen, setOpenSignup }) => {
         <div className="flex flex-col gap-2">
           {[
             {
-              Icon: inputData.type === 'phone' ? PhoneIcon : EmailIcon,
-              label: inputData.type,
+              Icon: inputData.type !== 'phone' ? PhoneIcon : EmailIcon,
+              label: inputData.type !== 'phone' ? 'Phone' : 'E-mail',
               onClick: toggleInputType,
             },
             { Icon: GoogleIcon, label: 'Google', onClick: () => {} },

@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Card from '../Card/Card';
 import CardSkeleton from '../Skeleton/CardSkeleton';
-import { DataInterface } from '../Home/Home';
+import { DataInterface } from '@/interfaces/post.interface';
 
 interface PopularCardInterface {
   data: DataInterface[];

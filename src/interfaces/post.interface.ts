@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface PostInterface {
   userId: number;
   id: number;
@@ -15,3 +17,24 @@ export interface PostUpdateInterface {
   content?: string;
 }
 
+export interface Posts {
+  id: number;
+  title: string;
+  href: string;
+  bannerImage: StaticImageData;
+  description: string;
+  date: string;
+  datetime: string;
+  category: { title: string; href: string };
+}
+
+export interface DataInterface {
+  name: string;
+  category: string;
+  image: StaticImageData;
+  volume: string;
+  type: string;
+  capacity: string;
+  price: string;
+  discountedPrice: string;
+}

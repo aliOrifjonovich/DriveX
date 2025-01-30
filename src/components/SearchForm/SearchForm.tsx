@@ -1,6 +1,6 @@
 'use client';
 
-import { Divider, MenuItem, Select } from '@mui/material';
+import { Divider } from '@mui/material';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Dayjs } from 'dayjs';
@@ -32,7 +32,7 @@ const SearchForm = () => {
   const onSubmit: SubmitHandler<SearchFormValues> = () => {};
 
   return (
-    <div className="z-20 rounded-lg bg-white px-6 py-4 md:absolute md:bottom-[-32px] md:left-1/2 md:w-[95%] md:-translate-x-1/2 md:py-1">
+    <div className="z-20 rounded-lg bg-white px-6 py-4 md:absolute md:bottom-[-32px] md:left-1/2 md:w-[95%] md:-translate-x-1/2 md:py-2">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-wrap items-center justify-between gap-4 max-md:block"
@@ -79,30 +79,27 @@ const SearchForm = () => {
               </div>
               <div>
                 <label
-                  htmlFor="untilTime"
+                  htmlFor="taking-Time"
                   className="mb-1 text-xs font-medium text-gray-600 md:text-lg"
                 >
                   Time
                 </label>
-                <Select
-                  value={watch('fromTime')}
-                  onChange={(e) => setValue('fromTime', e.target.value)}
-                  className="rounded-md border border-gray-300 text-sm text-gray-700 focus:border-blue-500 focus:outline-none"
-                  sx={{
-                    '& .MuiSelect-select': {
-                      padding: '9px', // Customize padding for the Select
-                    },
-                  }}
+
+                <select
+                  name="taking-Time"
+                  id="taking-Time"
+                  className="rounded-md border border-gray-300 p-3 text-sm text-gray-700 focus:border-blue-500 focus:outline-none"
                 >
                   {TIME_OPTIONS.map((time) => (
-                    <MenuItem
+                    <option
                       key={time}
                       value={time}
+                      className="p-2"
                     >
                       {time}
-                    </MenuItem>
+                    </option>
                   ))}
-                </Select>
+                </select>
               </div>
             </div>
           </div>
@@ -136,39 +133,36 @@ const SearchForm = () => {
 
               <div>
                 <label
-                  htmlFor="untilTime"
+                  htmlFor="until-time"
                   className="mb-1 text-xs font-medium text-gray-600 md:text-lg"
                 >
                   Time
                 </label>
-                <Select
-                  value={watch('untilTime')}
-                  onChange={(e) => setValue('untilTime', e.target.value)}
-                  className="rounded-md border border-gray-300 text-sm text-gray-700 focus:border-blue-500 focus:outline-none"
-                  sx={{
-                    '& .MuiSelect-select': {
-                      padding: '9px', // Customize padding for the Select
-                    },
-                  }}
+
+                <select
+                  name="untill-Time"
+                  id="untill-Time"
+                  className="rounded-md border border-gray-300 p-3 text-sm text-gray-700 focus:border-blue-500 focus:outline-none"
                 >
                   {TIME_OPTIONS.map((time) => (
-                    <MenuItem
+                    <option
                       key={time}
                       value={time}
+                      className="p-2"
                     >
                       {time}
-                    </MenuItem>
+                    </option>
                   ))}
-                </Select>
+                </select>
               </div>
             </div>
           </div>
         </div>
+
         <Divider
           orientation="vertical"
           variant="middle"
           flexItem
-          sx={{ height: '70px' }}
         />
 
         {/* Submit Button */}
