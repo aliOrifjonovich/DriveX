@@ -2,6 +2,7 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import Layout from '@/layouts/Layout';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -52,6 +53,7 @@ export default async function RootLayout({
             <Layout>
               {children}
               <Analytics />
+              <SpeedInsights />
             </Layout>
 
             <Footer />
