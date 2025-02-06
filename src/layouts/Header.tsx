@@ -8,6 +8,7 @@ import Modal from '@/components/Modal/Modal';
 import Signup from '@/components/Signup/Signup';
 import { Container } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import logo from '../assets/fontbolt.png';
 const Header = () => {
@@ -25,13 +26,15 @@ const Header = () => {
     <>
       <Container>
         <header className="flex items-center justify-between py-4">
-          <div className="flex h-[50px] w-[150px] items-center justify-between md:w-[250px]">
-            <Image
-              src={logo}
-              alt="logo"
-              className="h-full w-full object-contain"
-            />
-          </div>
+          <Link href="/">
+            <div className="flex h-[50px] w-[150px] items-center justify-between md:w-[250px]">
+              <Image
+                src={logo}
+                alt="logo"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </Link>
           <div className="flex items-start justify-center gap-3">
             <div className="hidden md:block">
               <LanguageSelection />

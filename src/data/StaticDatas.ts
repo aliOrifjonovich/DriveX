@@ -59,6 +59,43 @@ export const marqueData = {
       img: pickup,
     },
   ],
+
+  capasity: [
+    {
+      value: 2,
+    },
+    {
+      value: 4,
+    },
+    {
+      value: 6,
+    },
+    {
+      value: 8,
+    },
+  ],
+  fuel: [
+    {
+      value: 'Petrol',
+    },
+    {
+      value: 'Diesel',
+    },
+    {
+      value: 'Hybrid',
+    },
+    {
+      value: 'Electric',
+    },
+  ],
+  transmission: [
+    {
+      value: 'Automatic',
+    },
+    {
+      value: 'Manual',
+    },
+  ],
 };
 
 export const SocailMedia = [

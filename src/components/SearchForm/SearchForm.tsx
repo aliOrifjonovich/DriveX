@@ -5,9 +5,13 @@ import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Dayjs } from 'dayjs';
 import { useTranslations } from 'next-intl';
+import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../ui/button';
 
+interface SearchFormInterface {
+  className: string;
+}
 interface SearchFormValues {
   location: string;
   fromDate: Dayjs | null;
@@ -22,7 +26,7 @@ const TIME_OPTIONS = Array.from({ length: 48 }, (_, i) => {
   return `${hours % 12 || 12}:${minutes} ${hours < 12 ? 'AM' : 'PM'}`;
 });
 
-const SearchForm = () => {
+const SearchForm: FC<SearchFormInterface> = ({ className }) => {
   const t = useTranslations('HomePage');
   const { register, handleSubmit, setValue, watch } = useForm<SearchFormValues>({
     defaultValues: {
@@ -34,7 +38,7 @@ const SearchForm = () => {
   const onSubmit: SubmitHandler<SearchFormValues> = () => {};
 
   return (
-    <div className="z-20 rounded-lg bg-white px-6 py-4 md:absolute md:bottom-[-32px] md:left-1/2 md:w-[95%] md:-translate-x-1/2 md:py-2">
+    <div className={`"z-20 py-4" rounded-lg bg-white px-6 ${className}`}>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-wrap items-center justify-between gap-4 max-md:block"

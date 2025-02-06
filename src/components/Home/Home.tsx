@@ -104,7 +104,7 @@ export default function Home() {
       <div className="relative flex flex-col gap-10 py-5">
         <div className="flex flex-col gap-4 md:relative">
           <Banner />
-          <SearchForm />
+          <SearchForm  className={"md:absolute md:bottom-[-32px] md:left-1/2 md:w-[95%] md:-translate-x-1/2 md:py-2"}/>
         </div>
 
         <div className="mt-4 flex w-full flex-col items-center gap-4 rounded-md p-2">
