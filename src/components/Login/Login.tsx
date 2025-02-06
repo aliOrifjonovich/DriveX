@@ -30,7 +30,7 @@ const Login: React.FC<LoginProps> = ({ setOpen, setOpenSignup }) => {
   };
 
   return (
-    <div className="bg-primary-dark relative flex w-[250px] flex-col gap-8 p-4 sm:w-[450px] sm:p-8">
+    <div className="bg-primary-dark relative flex flex-col gap-8 p-4 sm:w-[250px] sm:p-4 md:w-[550px] md:gap-5 md:p-8">
       <span
         className="absolute right-2 top-4 cursor-pointer"
         onClick={() => setOpen(false)}
