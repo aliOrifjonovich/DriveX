@@ -41,8 +41,8 @@ const LanguageSelection: FC = () => {
 
   return (
     <div className="group relative">
-      <div className="flex cursor-pointer items-center gap-1 rounded-md border-2 border-solid border-[#C3D4E9] p-1">
-        <span className="">{selectedLang?.icon}</span>
+      <div className="flex cursor-pointer items-center justify-center gap-1 rounded-md border-2 border-solid border-[#C3D4E9] p-1">
+        <span className="pt-1">{selectedLang?.icon}</span>
         <span className="text-lg font-medium uppercase">{selectedLang?.label}</span>
       </div>
 

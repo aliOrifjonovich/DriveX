@@ -1,6 +1,7 @@
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import Layout from '@/layouts/Layout';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
@@ -48,7 +49,11 @@ export default async function RootLayout({
             <div className="sticky top-0 z-30 flex h-[94px] items-center justify-between bg-white">
               <Header />
             </div>
-            <Layout>{children}</Layout>
+            <Layout>
+              {children}
+              <Analytics />
+            </Layout>
+
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
