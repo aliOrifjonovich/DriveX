@@ -5,6 +5,7 @@ import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs, { Dayjs } from 'dayjs';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../ui/button';
@@ -29,6 +30,7 @@ const TIME_OPTIONS = Array.from({ length: 48 }, (_, i) => {
 
 const SearchForm: FC<SearchFormInterface> = ({ className, redirectPage }) => {
   const t = useTranslations('HomePage');
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -45,7 +47,11 @@ const SearchForm: FC<SearchFormInterface> = ({ className, redirectPage }) => {
     },
   });
 
-  const onSubmit: SubmitHandler<SearchFormValues> = () => {};
+  const onSubmit: SubmitHandler<SearchFormValues> = () => {
+    if (redirectPage) {
+      router.push(redirectPage);
+    }
+  };
 
   return (
     <div className={`"z-20 py-4" rounded-lg bg-white px-6 ${className}`}>
