@@ -22,7 +22,7 @@ const Banner: FC = () => {
           objectFit="contain"
         />
       </div>
-      <div className="absolute left-0 top-[-20px] z-0 h-full">
+      <div className="absolute left-0 top-[-20px] z-0 h-full max-md:hidden">
         <CircleIcon />
       </div>
       <div className="z-10 flex w-full flex-col items-center justify-center text-white md:w-1/2">

@@ -12,6 +12,7 @@ interface Props {
   setOpen: Dispatch<SetStateAction<boolean>>;
   open: boolean;
   children: ReactNode;
+  height?: string;
 }
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -28,7 +29,7 @@ const Puller = styled(Box)(({ theme }) => ({
   left: 'calc(50% - 15px)',
 }));
 
-export default function MobileModel({ window, setOpen, open, children }: Props) {
+export default function MobileModel({ window, setOpen, open, children, height }: Props) {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
@@ -45,8 +46,6 @@ export default function MobileModel({ window, setOpen, open, children }: Props) 
           },
           '& .MuiDrawer-root > .MuiPaper-root': {
             overflow: 'hidden',
-            borderRadius: '12px 12px 0 0',
-            height: '80vh !important',
           },
         }}
       />
@@ -63,7 +62,7 @@ export default function MobileModel({ window, setOpen, open, children }: Props) 
         }}
         PaperProps={{
           sx: {
-            height: '80vh',
+            height: height || '80vh',
             borderRadius: '12px 12px 0 0',
             overflow: 'hidden',
           },

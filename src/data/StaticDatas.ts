@@ -2,6 +2,9 @@ import { FacebookIcon, InstagramIcon, TwitterIcon } from '@/Icons/NotificationIc
 import bmw from '../assets/bmw.png';
 import byd from '../assets/byd.png';
 
+import { EnLangIcon } from '@/Icons/EnLangIcon';
+import { RuLangIcon } from '@/Icons/RuLangIcon';
+import { UzLangIcon } from '@/Icons/UzLangIcon';
 import { Posts } from '@/interfaces/post.interface';
 import chevrolet from '../assets/chevrolet.webp';
 import crossovers from '../assets/crossovers.png';
@@ -169,4 +172,14 @@ export const posts: Posts[] = [
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
   },
+];
+
+export const langs = [
+  { label: 'ru', icon: RuLangIcon },
+  { label: 'uz', icon: UzLangIcon },
+  { label: 'en', icon: EnLangIcon },
+];
+export const currencies = [
+  { label: 'sum', symbol: 'UZS' },
+  { label: 'usd', symbol: 'USD' },
 ];

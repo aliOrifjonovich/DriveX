@@ -11,9 +11,9 @@ const Footer = () => {
     {
       name: t('about'),
       pages: [
-        { page: t('about'), href: '/about-us' },
-        { page: t('news'), href: '/blogs' },
-        { page: t('contact_us'), href: '/contact-us' },
+        { page: t('about'), href: '/about' },
+        { page: t('news'), href: '/blog' },
+        { page: t('contact_us'), href: '/contact' },
         { page: t('privacy_policy'), href: '/privacy-policy' },
         { page: t('terms_and_conditions'), href: '/terms-and-conditions' },
       ],

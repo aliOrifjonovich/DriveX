@@ -169,6 +169,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ setOpen, setOpenSignup, u
             }`}
             onClick={handleMenuOpen}
           >
+            {}
             <HamburgerMenuIcon />
             <ProfileIcon />
           </div>
@@ -181,7 +182,9 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ setOpen, setOpenSignup, u
             sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}
           >
             <HamburgerMenuIcon />
-            <ProfileIcon />
+            <span className="max-[345px]:hidden">
+              <ProfileIcon />
+            </span>
           </Button>
           <Drawer
             anchor="left"

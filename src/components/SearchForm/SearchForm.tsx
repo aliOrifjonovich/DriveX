@@ -3,7 +3,7 @@
 import { Divider } from '@mui/material';
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { Dayjs } from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -11,6 +11,7 @@ import Button from '../ui/button';
 
 interface SearchFormInterface {
   className: string;
+  redirectPage?: string;
 }
 interface SearchFormValues {
   location: string;
@@ -26,11 +27,20 @@ const TIME_OPTIONS = Array.from({ length: 48 }, (_, i) => {
   return `${hours % 12 || 12}:${minutes} ${hours < 12 ? 'AM' : 'PM'}`;
 });
 
-const SearchForm: FC<SearchFormInterface> = ({ className }) => {
+const SearchForm: FC<SearchFormInterface> = ({ className, redirectPage }) => {
   const t = useTranslations('HomePage');
-  const { register, handleSubmit, setValue, watch } = useForm<SearchFormValues>({
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm<SearchFormValues>({
     defaultValues: {
+      location: '',
+      fromDate: dayjs(),
       fromTime: '10:00 AM',
+      untilDate: dayjs(),
       untilTime: '10:00 AM',
     },
   });
@@ -55,9 +65,10 @@ const SearchForm: FC<SearchFormInterface> = ({ className }) => {
             id="location"
             type="text"
             placeholder={t('location_placeholder')}
-            {...register('location', { required: true })}
+            {...register('location', { required: 'Location is required' })}
             className="w-full rounded-md border-[1px] border-solid border-gray-300 p-2 text-sm text-gray-700 outline-none hover:border-black focus:border-blue-500 focus:outline-none"
           />
+          {errors.location && <p className="text-red-500">{errors.location.message}</p>}
         </div>
         <Divider
           orientation="vertical"

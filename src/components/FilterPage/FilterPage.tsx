@@ -64,6 +64,7 @@ const FilterPage: FC<FilterPageInterface> = ({ data }) => {
       <MobileModel
         open={openSearchBar}
         setOpen={setOpenSearchBar}
+        height="40vh"
       >
         <SearchForm className="p-4" />
       </MobileModel>
@@ -71,6 +72,7 @@ const FilterPage: FC<FilterPageInterface> = ({ data }) => {
       <MobileModel
         open={openSideBar}
         setOpen={setOpenSideBar}
+        height="90vh"
       >
         <div className="mb-4 px-2 py-4">
           <SideBarFilters />
