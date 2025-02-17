@@ -7,7 +7,9 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
+
 import './globals.css';
 
 import ThemeProvider from '@/theme/ThemeProvider';
@@ -61,6 +63,10 @@ export default async function RootLayout({
               <Header />
             </div>
             <Layout>
+              <NextTopLoader
+                height={5}
+                crawlSpeed={200}
+              />
               {children}
               <Analytics />
               <SpeedInsights />
