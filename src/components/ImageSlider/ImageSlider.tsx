@@ -83,7 +83,7 @@ const ImageSlider = () => {
 
         <button
           onClick={() => setOpen(true)}
-          className="absolute bottom-2 right-2 cursor-pointer rounded-lg bg-black px-4 py-2 text-white"
+          className="absolute bottom-2 right-2 cursor-pointer rounded-lg border-none bg-white px-4 py-2 font-bold text-black md:bottom-4 md:right-4"
         >
           View other {remainingImages} images
         </button>
