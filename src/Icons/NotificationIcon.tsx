@@ -593,7 +593,7 @@ export const FuelIcon: FC<ComponentProps<'svg'>> = () => {
   );
 };
 
-export const CartIcon: FC<ComponentProps<'svg'>> = (props) => {
+export const CartIcon: FC<ComponentProps<'svg'>> = () => {
   return (
     <svg
       width="24"

@@ -1,10 +1,12 @@
 'use client';
+
 import { LikeIcon } from '@/Icons';
 import { CancelIcon } from '@/Icons/NotificationIcon';
 import { useState } from 'react';
 import Login from '../Login/Login';
 import Modal from '../Modal/Modal';
 import Signup from '../Signup/Signup';
+import Image from 'next/image';
 
 const images = [
   {
@@ -54,7 +56,7 @@ const ImageSlider = () => {
             className="h-full w-full"
             onClick={() => setOpen(true)}
           >
-            <img
+            <Image
               src={images[0].url}
               width={500}
               height={500}

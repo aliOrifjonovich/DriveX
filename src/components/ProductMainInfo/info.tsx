@@ -33,9 +33,9 @@ const productFeatures = [
 const Info = () => {
   const t = useTranslations('HomePage');
 
-  const group1 = productFeatures.slice(0, 2);
-  const group2 = productFeatures.slice(2, 4);
-  const group3 = productFeatures.slice(4);
+//   const group1 = productFeatures.slice(0, 2);
+//   const group2 = productFeatures.slice(2, 4);
+//   const group3 = productFeatures.slice(4);
 
   return (
     <div className="flex flex-col gap-5">

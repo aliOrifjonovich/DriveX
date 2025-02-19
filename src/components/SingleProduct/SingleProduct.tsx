@@ -6,7 +6,7 @@ const SingleProduct = () => {
   return (
     <Container>
       <div className="flex flex-col gap-4 py-5">
-        <div className="flex w-full flex-col gap-4 border border-solid md:flex-row md:gap-5">
+        <div className="flex w-full flex-col gap-4 md:flex-row md:gap-5">
           <div className="w-full md:w-1/2">
             <ImageSlider />
           </div>
