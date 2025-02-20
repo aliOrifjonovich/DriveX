@@ -1,12 +1,12 @@
 'use client';
 
 import { LikeIcon } from '@/Icons';
-import { CancelIcon } from '@/Icons/NotificationIcon';
+import { CancelIcon, ShowMoreImageIcon } from '@/Icons/NotificationIcon';
+import Image from 'next/image';
 import { useState } from 'react';
 import Login from '../Login/Login';
 import Modal from '../Modal/Modal';
 import Signup from '../Signup/Signup';
-import Image from 'next/image';
 
 const images = [
   {
@@ -85,8 +85,9 @@ const ImageSlider = () => {
 
         <button
           onClick={() => setOpen(true)}
-          className="absolute bottom-2 right-2 cursor-pointer rounded-lg border-none bg-white px-4 py-2 font-bold text-black md:bottom-4 md:right-4"
+          className="absolute bottom-2 right-2 flex cursor-pointer flex-row items-center gap-2 rounded-lg border-none bg-white px-4 py-2 font-bold text-black md:bottom-4 md:right-4"
         >
+          <ShowMoreImageIcon />
           View other {remainingImages} images
         </button>
       </div>

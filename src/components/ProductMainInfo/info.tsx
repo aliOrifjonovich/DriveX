@@ -1,41 +1,45 @@
+'use client';
+
 import { BalloonIcon, LikeIcon } from '@/Icons';
-import { CartIcon, DoorsIcon, FuelIcon, PersonIcon, SeatsIcon } from '@/Icons/NotificationIcon';
-import { Divider, Grid2 } from '@mui/material';
+import {
+  BackCameraIcon,
+  BluetoothIcon,
+  CartIcon,
+  DoorsIcon,
+  FuelIcon,
+  HeatedSeatsIcon,
+  PersonIcon,
+  PlayIcon,
+  SeatsIcon,
+  UsbChargeIcon,
+  USBIcon,
+} from '@/Icons/NotificationIcon';
+import { Divider } from '@mui/material';
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 const productFeatures = [
-  {
-    title: '4 doors',
-    icon: <DoorsIcon />,
-  },
-  {
-    title: '5 seats',
-    icon: <SeatsIcon />,
-  },
-  {
-    title: 'Gasoline, Benzine',
-    icon: <FuelIcon />,
-  },
-  {
-    title: 'Minimum age: 25',
-    icon: <PersonIcon />,
-  },
-  {
-    title: 'Automation',
-    icon: <BalloonIcon />,
-  },
-  {
-    title: 'Deposit: 5000$',
-    icon: <CartIcon />,
-  },
+  { title: '4 doors', icon: <DoorsIcon /> },
+  { title: '5 seats', icon: <SeatsIcon /> },
+  { title: 'Gasoline, Benzine', icon: <FuelIcon /> },
+  { title: 'Minimum age: 25', icon: <PersonIcon /> },
+  { title: 'Automation', icon: <BalloonIcon /> },
+  { title: 'Deposit: 5000$', icon: <CartIcon /> },
+  { title: 'Android Auto', icon: <PlayIcon /> },
+  { title: 'Apple CarPlay', icon: <PlayIcon /> },
+  { title: 'Backup camera', icon: <BackCameraIcon /> },
+  { title: 'Bluetooth', icon: <BluetoothIcon /> },
+  { title: 'Heated seats', icon: <HeatedSeatsIcon /> },
+  { title: 'USB charger', icon: <UsbChargeIcon /> },
+  { title: 'USB Icon', icon: <USBIcon /> },
 ];
 
 const Info = () => {
   const t = useTranslations('HomePage');
+  const [showAll, setShowAll] = useState(false);
 
-//   const group1 = productFeatures.slice(0, 2);
-//   const group2 = productFeatures.slice(2, 4);
-//   const group3 = productFeatures.slice(4);
+  const visibleFeatures = showAll ? productFeatures : productFeatures.slice(0, 6);
 
   return (
     <div className="flex flex-col gap-5">
@@ -52,68 +56,35 @@ const Info = () => {
       </div>
       <Divider />
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
         <h4>Main Features</h4>
 
-        <div className="flex items-center justify-around gap-4">
-          <Grid2
-            container
-            spacing={1}
-            sx={{ width: '100%' }}
-          >
-            {productFeatures.map((feature, index) => (
-              <Grid2
-                size={{ xs: 12, sm: 6, md: 4 }}
-                key={index}
-                style={{ padding: '5px 0' }}
-              >
-                <div
-                  key={index}
-                  className="flex items-center gap-2"
-                >
-                  {feature.icon}
-                  <p className="text-[#596780]">{feature.title}</p>
-                </div>
-              </Grid2>
-            ))}
-          </Grid2>
+        <motion.div
+          className="grid grid-cols-2 gap-4 md:grid-cols-3"
+          initial={{ height: 'auto' }}
+          animate={{ height: 'auto' }}
+          transition={{ duration: 0.3 }}
+        >
+          {visibleFeatures.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center gap-2"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+            >
+              {feature.icon}
+              <p className="text-[#596780]">{feature.title}</p>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          {/* <div className="flex flex-col gap-4">
-            {group1.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2"
-              >
-                {feature.icon}
-                <p className="text-[#596780]">{feature.title}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-4">
-            {group2.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2"
-              >
-                {feature.icon}
-                <p className="text-[#596780]">{feature.title}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-4">
-            {group3.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-2"
-              >
-                {feature.icon}
-                <p className="text-[#596780]">{feature.title}</p>
-              </div>
-            ))}
-          </div> */}
-        </div>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-1 cursor-pointer self-start rounded-md bg-transparent p-1 text-[14px] font-semibold transition-all hover:bg-gray-300"
+        >
+          {showAll ? 'Less' : 'More'}
+        </button>
       </div>
       <Divider />
 
@@ -134,12 +105,13 @@ const Info = () => {
         </div>
       </div>
       <Divider />
+
       <div className="flex items-center justify-between px-4">
         <div className="text-2xl font-normal">
           <div className="font-semibold text-black">
             {'$80'}/ <span className="text-xl font-medium text-secondary">day</span>
           </div>
-          <p className="text- text-sm text-secondary">{'$100'}</p>
+          <p className="text-sm text-secondary">{'$100'}</p>
         </div>
 
         <button className="cursor-pointer rounded-md bg-black px-5 py-3 text-xs font-bold text-white hover:bg-white hover:text-black">
